@@ -5,7 +5,10 @@ import NumResults from "./NumResults";
 
 function NavBar({ children }) {
   return (
-    <nav className="nav-bar">{children}</nav>
+    <nav className="nav-bar">
+      <Logo />
+      {children}
+    </nav>
     // <Logo />
     // <Search />
     // <NumResults />

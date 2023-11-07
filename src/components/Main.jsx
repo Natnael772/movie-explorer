@@ -5,11 +5,12 @@ import WatchedBox from "./WatchedBox";
 const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
 
-function Main() {
+function Main({ children }) {
   return (
     <main className="main">
-      <ListBox />
-      <WatchedBox />
+      {children}
+      {/* <ListBox />
+      <WatchedBox /> */}
     </main>
   );
 }
