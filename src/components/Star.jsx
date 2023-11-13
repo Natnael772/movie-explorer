@@ -1,6 +1,6 @@
 import React from "react";
 
-function Star() {
+function Star({ onRate, onHoverIn, onHoverOut, full, size, color }) {
   const starStyle = {
     width: `${size}px`,
     height: `${size}px`,
