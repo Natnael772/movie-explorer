@@ -13,6 +13,7 @@ function StarRating() {
           <Star />
         ))}
       </div>
+      <p style={textStyle}>{rating}</p>
     </div>
   );
 }
