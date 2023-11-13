@@ -6,6 +6,23 @@ function StarRating() {
   const [rating, setRating] = useState(defaultRating);
   const [tempRating, setTempRating] = useState(0);
 
+  function handleRating(rating) {
+    setRating(rating);
+    onSetRating(rating);
+  }
+
+  const textStyle = {
+    lineHeight: "1",
+    margin: "0",
+    color,
+    fontSize: `${size}px`,
+  };
+
+  const starContainerStyle = {
+    display: "flex",
+    //   gap: "4px",
+  };
+
   return (
     <div style={contaierStyle}>
       <div style={starContainerStyle}>
