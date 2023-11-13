@@ -27,7 +27,15 @@ function StarRating() {
     <div style={contaierStyle}>
       <div style={starContainerStyle}>
         {Array.from({ length: maxRating }, (_, i) => (
-          <Star />
+          <Star
+            key={i}
+            onRate={() => handleRating(i + 1)}
+            onHoverIn={() => setTempRating(i + 1)}
+            onHoverOut={() => setTempRating(0)}
+            full={tempRating ? tempRating >= i + 1 : rating >= i + 1}
+            color={color}
+            size={size}
+          />
         ))}
       </div>
       <p style={textStyle}>
