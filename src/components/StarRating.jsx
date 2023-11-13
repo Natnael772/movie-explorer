@@ -1,8 +1,21 @@
 import React, { useState } from "react";
 import Star from "./Star";
 
+const contaierStyle = {
+  display: "flex",
+  alignItems: "center",
+  gap: "16px",
+};
+
 //set default value not to encounter error due to unpassed prop
-function StarRating() {
+function StarRating({
+  maxRating = 5,
+  color = "#fcc419",
+  size = 32,
+  messages = [],
+  defaultRating = 0,
+  onSetRating,
+}) {
   const [rating, setRating] = useState(defaultRating);
   const [tempRating, setTempRating] = useState(0);
 
